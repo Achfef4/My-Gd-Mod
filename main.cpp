@@ -15,14 +15,14 @@ class $modify(LevelListLayer) {
                 oldSelectBtn->setVisible(false); 
             }
 
-            // 2. صناعة زر VIEW جديد بالكامل باللون الزهري الفخم بدلاً منه بدون تعديل على الصور
+            // 2. صناعة زر VIEW جديد بالكامل باللون الزهري الفخم بدلاً منه
             auto viewLabel = CCLabelBMFont::create("VIEW", "bigFont.fnt");
             if (viewLabel) {
                 viewLabel->setScale(0.6f);
-                viewLabel->setColor({255, 105, 180}); // لون زهري فخم
+                viewLabel->setColor({255, 105, 180}); 
 
                 auto viewBtn = CCMenuItemSpriteExtra::create(
-                    viewLabel, this, menu_selector(LevelListLayer::onPlay)
+                    viewLabel, this, menu_selector(LevelListLayer::onPlayList)
                 );
                 viewBtn->setID("achfef-view-button");
                 menu->addChild(viewBtn);
@@ -36,7 +36,7 @@ class $modify(LevelListLayer) {
             auto playSpr = CCSprite::createWithSpriteFrameName("GJ_playBtn_001.png");
             if (playSpr) {
                 auto playBtn = CCMenuItemSpriteExtra::create(
-                    playSpr, this, menu_selector(LevelListLayer::onPlay)
+                    playSpr, this, menu_selector(LevelListLayer::onPlayList)
                 );
                 playBtn->setID("achfef-play-button");
                 playMenu->addChild(playBtn);
